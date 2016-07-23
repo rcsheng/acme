@@ -1,0 +1,19 @@
+{% extends './layout.html' %}
+{% block main %}
+{% if products.length === 0 %}
+<div class='well'>
+You have no more products
+</div>
+{% endif %}
+
+<form method='POST' action='/products'>
+	<fieldset class="form-group">
+		<label for="productName">Name</label>
+	    <input type="text" class="form-control" name="productName" id="productName" style="margin-bottom:10px;">
+		<button type='submit' style='margin-right: 10px;' class='btn btn-primary'>Insert</button>
+	</fieldset>
+</form>
+
+	
+
+{% endblock %}

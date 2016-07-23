@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+{% block main %}
+{% if products.length === 0 %}
+<div class='well'>
+You have no more products
+</div>
+{% endif %}
+
+<form method='POST' action='/products/{{product.id}}'>
+	<label for="productName">Name</label>
+    <input type="text" class="form-control" name="productName" id="productName" value="{{product.name}}">
+	<button type='submit' style='margin-right: 10px' class='btn btn-primary'>Update</button>
+</form>
+
+	
+
+{% endblock %}

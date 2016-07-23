@@ -1,0 +1,18 @@
+{% extends './layout.html' %}
+{% block main %}
+<h2>Products Here</h2>
+{% if products.length === 0 %}
+<div class='well'>
+You have no more products
+</div>
+{% endif %}
+<a class='btn btn-primary' href='/products/add'>Add a Product</a>
+<br></br>
+
+<ul class='list-group'>
+	{% for item in products %}
+	{% include './_productItems.html' %}
+	
+	{% endfor %}
+</ul>
+{% endblock %}
